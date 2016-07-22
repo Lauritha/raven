@@ -56,7 +56,7 @@ h3{
 }
 /*estilos banner*/
 .logo{
-	width: 40%;
+	width: 35%;
 	margin-top: -5%;
 }
 .fondo-fixed {
@@ -71,13 +71,13 @@ h3{
 }
 /*estilos de equipo*/
 .equipo{
-	background-color: #0F4B56;
-	padding: 9%;
+	background-color: #104A57;
+	padding: 13%;
 }
 .name {
   	width: 100%;
   	padding-top: 300px;
-  	color: ##FB6A33;
+  	color: #FB6A33;
   	font-size: 2em;
   	margin-bottom: 1%;
   	position: absolute;
