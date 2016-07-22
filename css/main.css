@@ -53,6 +53,10 @@ h3{
 .navbar-right{
 	margin-right: 0;
 }
+.logo2{
+  width: 16%;
+  margin-top: -13px;
+}
 /*estilos banner*/
 .logo{
 	width: 35%;
@@ -65,12 +69,12 @@ h3{
 }
 /*estilos de nosotros*/
 .nosotros{
-	background-color: #FB6A33;
+  background-image: url(../images/fondos/loop-2.png);
 	padding: 20%;
 }
 /*estilos de equipo*/
 .equipo{
-	background-color: #0F4B56;
+	background-image: url(../images/fondos/loop-1.png);
 	padding: 9%;
 }
 .name {
@@ -208,6 +212,10 @@ h3{
 }
 .text{
 	font-size: 1.4em;
+}
+/*estilos de services*/
+.services{
+  background-image: url(../images/fondos/loop-3.png);
 }
 
 /*estilos del footer*/
