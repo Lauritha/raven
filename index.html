@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app='mainApp'>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +8,8 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
 	<link rel="icon" type="image/png" href="images/Dloop_favicon.png" />
 	<link href='https://fonts.googleapis.com/css?family=Lato:400,700,300' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
 	<link rel="stylesheet" href="fonts/REZ.ttf">
 	<link rel="stylesheet" href="css/main.css">
 </head>
@@ -164,7 +166,8 @@
 			</div>
 		</div>
 	</section>
-	<section class="contacto container-fluid scroller fondo-fixed" id="contacto">
+	<section class="contacto container-fluid scroller fondo-fixed" id="contacto" ng-controller='contactController'>
+	<div class="container">
 		<div class="row">
 			<div class="col-md-12 col-sm-12 col-xs-12">
 				<h1>Contacto</h1>
@@ -172,21 +175,37 @@
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-md-12 col-sm-12 col-xs-12">
-				<p>Para cualquier duda, puedes contactarte con nosotros. Queremos ayudarte en todos tus proyectos.</p>
-				<div class="row">
-					<div class="col-md-12 col-xs-12 col-sm-12">
-						<form action="contacto">
-							<input type="text" placeholder="Nombre*">
-							<input type="text" placeholder="Email*">
-							<input type="text" placeholder="Asunto*">
-							<textarea name="mensaje" id="" cols="30" rows="10">Mensaje</textarea>
-							<button class="enviar2">ENVIAR</button>
-						</form>
-					</div>
+		    <form name='contactForm' class="col s12 m12 l12">
+		      <div class="row">
+		        <div name='first_name' class="input-field col s3 m6 l6 push-s3 m6 l6" ng-class="{ 'has-error' : contactForm.first_name.$invalid && !contactForm.first_name.$pristine }">
+		          <input placeholder="Nombre" id="first_name" type="text" class="validate">
+		          <label for="first_name"></label>
+		        </div>
+		        <div name='last_name' class="input-field col s3 m6 l6 pull-s3 m6 l6" ng-class="{ 'has-error' : contactForm.last_name.$invalid && !contactForm.last_name.$pristine }">
+		          <input placeholder="Apellido" id="last_name" type="text" class="validate">
+		          <label for="last_name"></label>
+		        </div>
+		      </div>
+		      <div class="row">
+		        <div class="input-field col s12 m12 l12">
+		          <input placeholder="Email" id="email" type="email" class="validate">
+		          <label for="email"></label>
+		        </div>
+		      </div>
+		      <div class="row">
+				    <form class="col s12 m12 l12">
+				      <div class="row">
+				        <div class="input-field col s12 m12 l12">
+				          <textarea placeholder="Mensaje" id="textarea1" class="materialize-textarea"></textarea>
+				          <label for="textarea1"></label>
+				        </div>
+				      </div>
+				    </form>
 				</div>
-			</div>
+				<button class="btn-floating btn-large waves-effect waves-light"><i class="fa fa-envelope-o" aria-hidden="true"></i></button>
+		    </form>
 		</div>
+	</div>
 	</section>
 	<footer class="container-fluid">
 		<div class="row">
